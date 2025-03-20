@@ -1,0 +1,13 @@
+// Example of simple form validation using JavaScript
+document.querySelector('form').addEventListener('submit', function(e) {
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const message = document.querySelector('#message').value;
+
+    if (name === '' || email === '' || message === '') {
+        alert('Please fill out all fields.');
+        e.preventDefault();
+    } else {
+        alert('Message sent successfully!');
+    }
+});
